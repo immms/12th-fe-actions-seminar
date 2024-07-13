@@ -1,0 +1,21 @@
+name : Check Build Posiibility
+
+on:
+  pull_request:
+    branchesd: ["main"]
+
+jobs:
+  # Build 명령어 실행으로 빌드 가능여부 검증
+  build-test:
+    runs-on: ubuntu-20.04
+    env:
+      DISABLE_ESLINT_PLUGIN: true
+    steps:
+      - uses: actions/checkout@v3 # feature 브랜치코드 가져오기
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: "21.2.0"
+      - name: Install dependencies
+        run: npm install
+      - name: Try build
+        run: npm run build
