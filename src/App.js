@@ -15,6 +15,14 @@ function App() {
         >
           블로그 구경하기
         </a>
+        <a
+          className="App-link"
+          href="https://www.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          구글링크
+        </a>
       </header>
     </div>
   );
