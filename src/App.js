@@ -21,7 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          구글링크지롱
+          구글링크임다
         </a>
       </header>
     </div>
